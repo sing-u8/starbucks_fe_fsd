@@ -1,8 +1,8 @@
 export interface MemberLoginIdType {
-	loginId: string
+  loginId: string
 }
 
 export interface FindLoginIdReqType {
-	name: string
-	phoneNumber: string
+  name: string
+  phoneNumber: string
 }

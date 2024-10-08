@@ -1,10 +1,10 @@
 export interface PaginationRequest {
-	page: number
-	size: number
-	sort?: string[]
+  page: number
+  size: number
+  sort?: string[]
 }
 
 export const defaultPaginationRequest: PaginationRequest = {
-	page: 0,
-	size: 20
+  page: 0,
+  size: 20,
 }

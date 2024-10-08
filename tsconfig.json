@@ -25,7 +25,7 @@
       "@/feature/*": ["./src/feature/*"],
       "@/widget/*": ["./src/widget/*"],
       "@/page/*": ["./src/page/*"],
-      "@/app/*": ["./src/app/*"],
+      "@/app/*": ["./src/app/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

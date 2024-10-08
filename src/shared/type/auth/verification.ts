@@ -1,3 +1,3 @@
 export interface VerificationType {
-	type: "forgotId" | "resetPassword"
+  type: "forgotId" | "resetPassword"
 }
