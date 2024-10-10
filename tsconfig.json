@@ -20,6 +20,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
+      "@/assets/*": ["./src/assets/*"],
       "@/shared/*": ["./src/shared/*"],
       "@/entity/*": ["./src/entity/*"],
       "@/feature/*": ["./src/feature/*"],
