@@ -1,13 +1,13 @@
 "use server"
 
-import { ApiResponse } from "@/type/common/response"
+import { ApiResponse } from "@/shared/type/common/response"
 import {
   MainProductCategoryType,
   TopProductCategoryType,
   MiddleProductCategoryType,
   BottomProductCategoryType,
   ProductCategoryQuery,
-} from "@/type/shop/product-category"
+} from "@/shared/type/shop/product-category"
 import _ from "lodash"
 
 // await new Promise((resolve) => setTimeout(resolve, 2000))
@@ -140,7 +140,9 @@ export async function getBottomProductCategoryAction(
 //----------------------------- all category actions ------------------------------------
 export async function getAllTopProductCategoriesAction(
   queryObj: ProductCategoryQuery,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
 ): Promise<any> {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const fetchPromises: any = [getTopProductCategoriesAction()]
 
   if (!_.isEmpty(queryObj.ptcc)) {

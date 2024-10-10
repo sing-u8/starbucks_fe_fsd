@@ -68,18 +68,21 @@ export const getCategoryPath = (
 }
 
 function isTopProductCategory(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   category: any,
 ): category is TopProductCategoryType {
   return "topCategoryName" in category
 }
 
 function isMiddleProductCategory(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   category: any,
 ): category is MiddleProductCategoryType {
   return "middleCategoryName" in category
 }
 
 function isBottomProductCategory(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   category: any,
 ): category is BottomProductCategoryType {
   return "bottomCategoryName" in category
