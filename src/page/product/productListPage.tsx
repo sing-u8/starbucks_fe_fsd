@@ -8,14 +8,14 @@ import { getProductIds } from "@/shared/action/product/productAction"
 import BaseLoader from "@/shared/ui/baseLoader"
 
 import { defaultPaginationRequest } from "@/shared/type/common/request"
-import ProductItemSkeleton from "@/entity/(shop)/product/ProductItemSkeleton"
-import ProductItemsWrapper from "@/components/page/product/listpage/productItemsWrapper"
+import ProductItemSkeleton from "@/entity/product/ProductItemSkeleton"
+import ProductItemsWrapper from "@/feature/get-product/productItemsWrapper"
 
 interface ProductListCLProps {
   reqOption: GetProductListIdsRequest
 }
 
-function ProductListCL({ reqOption }: ProductListCLProps) {
+export function ProductListPage({ reqOption }: ProductListCLProps) {
   const ref = useRef<HTMLDivElement | null>(null)
   const pageRef = useIntersectionObserver(ref, {})
   const isPageEnd = !!pageRef?.isIntersecting
@@ -93,5 +93,3 @@ function ProductListCL({ reqOption }: ProductListCLProps) {
     </>
   )
 }
-
-export default ProductListCL

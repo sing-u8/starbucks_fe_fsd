@@ -2,14 +2,14 @@
 
 import React from "react"
 import { useQueries } from "@tanstack/react-query"
-import { getProductInfoAndThumbnail } from "@/action/product/productAction"
-import ProductList from "@/components/atom/product/productList"
-import ProductItemSkeleton from "@/components/atom/product/ProductItemSkeleton"
+import { getProductInfoAndThumbnail } from "@/shared/action/product/productAction"
+import ProductItemSkeleton from "@/entity/product/ProductItemSkeleton"
 import {
   GetProductInfoResponse,
   GetProductThumbnailResponse,
-} from "@/type/shop/product"
-import ProductItemCL from "@/components/page/product/listpage/productItemCL"
+} from "@/shared/type/shop/product"
+import { ProductItem } from "@/entity/product/productItem"
+import ProductListContainer from "@/entity/product/productListContainer"
 
 interface ProductItemsWrapperProps {
   productItemIds: number[]
@@ -27,19 +27,19 @@ function ProductItemsWrapper({ productItemIds }: ProductItemsWrapperProps) {
 
   if (productItemQueries.find((query) => query.isLoading)) {
     return (
-      <ProductList>
+      <ProductListContainer>
         {productItemQueries.map((query, index) => {
           return <ProductItemSkeleton key={index} />
         })}
-      </ProductList>
+      </ProductListContainer>
     )
   }
 
   return (
     <>
-      <ProductList>
+      <ProductListContainer>
         {productItemQueries.map((query, index) => (
-          <ProductItemCL
+          <ProductItem
             key={index}
             productInfo={query?.data?.productInfo as GetProductInfoResponse}
             productThumbnail={
@@ -47,7 +47,7 @@ function ProductItemsWrapper({ productItemIds }: ProductItemsWrapperProps) {
             }
           />
         ))}
-      </ProductList>
+      </ProductListContainer>
     </>
   )
 }

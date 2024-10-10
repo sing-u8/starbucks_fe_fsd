@@ -36,3 +36,29 @@ export const toDiscountPrice = (
   const _price = price - discountedPrice
   return toPrice(_price)
 }
+
+export const getProductOrderFilterValue = (order: string) => {
+  return _.find(orderConditionList, { id: order })
+}
+export const getDefaultProductOrderFilterValue = (value: string) => {
+  return getProductOrderFilterValue(value) ?? { id: "NEWEST", value: "최신순" }
+}
+
+const orderConditionList = [
+  {
+    id: "NEWEST",
+    value: "최신순",
+  },
+  {
+    id: "DISCOUNT",
+    value: "할인순",
+  },
+  {
+    id: "HIGHEST_PRICE",
+    value: "높은 가격순",
+  },
+  {
+    id: "LOWEST_PRICE",
+    value: "낮은 가격순",
+  },
+]

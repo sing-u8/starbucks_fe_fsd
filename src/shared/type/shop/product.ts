@@ -1,5 +1,5 @@
-import { PaginationRequest } from "@/type/common/request"
-import { PaginationResponse } from "@/type/common/response"
+import { PaginationRequest } from "@/shared/type/common/request"
+import { PaginationResponse } from "@/shared/type/common/response"
 
 export interface ProductItemType {
   uuid: string
@@ -27,7 +27,7 @@ export interface ProductCarouselType {
   href?: string
 }
 
-export interface ProductDetailType {}
+// export interface ProductDetailType {}
 
 export interface ProductCategItem {
   id: string
@@ -46,8 +46,7 @@ export interface ProductListCategFilterItem {
 
 // -----------------------------product ids ------------------------------
 
-export interface GetProductListIdsResponse
-  extends PaginationResponse<number[]> {}
+export type GetProductListIdsResponse = PaginationResponse<number[]>
 
 export interface GetProductListIdsRequest extends PaginationRequest {
   topCode?: string
