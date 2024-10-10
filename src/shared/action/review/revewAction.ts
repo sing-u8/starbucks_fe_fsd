@@ -1,15 +1,15 @@
 "use server"
 
-import { ApiResponse } from "@/type/common/response"
+import { ApiResponse } from "@/shared/type/common/response"
 import _ from "lodash"
-import { createQueryParamString } from "@/lib/queryParamUtils"
+import { createQueryParamString } from "@/shared/lib/queryParamUtils"
 import {
   GetReviewIdsRequest,
   GetReviewIdsResponse,
   GetReviewImageResponse,
   GetReviewInfoResponse,
   GetReviewSummaryResponse,
-} from "@/type/shop/review"
+} from "@/shared/type/shop/review"
 
 export async function getReviewSummaryResponse(
   productId: number | string,

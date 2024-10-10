@@ -1,7 +1,7 @@
 "use server"
 
-import { SignUpRequestBodyType } from "@/type/auth/signUp"
-import { getUtcFromBirthdate } from "@/lib/dayjsUtils"
+import { SignUpRequestBodyType } from "@/shared/type/auth/signUp"
+import { getUtcFromBirthdate } from "@/shared/lib/dayjsUtils"
 
 export async function signUpAction(
   req: SignUpRequestBodyType,

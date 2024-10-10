@@ -46,3 +46,8 @@ next-env.d.ts
 /.idea/inspectionProfiles/Project_Default.xml
 /.idea/starbucks_fe_fsd.iml
 /.idea/vcs.xml
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

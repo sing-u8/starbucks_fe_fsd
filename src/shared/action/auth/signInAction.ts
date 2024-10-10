@@ -1,6 +1,6 @@
 "use server"
 
-import { loginSchemaType } from "@/schema/authSchema"
+import { loginSchemaType } from "@/shared/schema/authSchema"
 
 export async function signInAction(data: loginSchemaType): Promise<Response> {
   return await fetch(`${process.env.API_BASE_URL}/api/v1/auth/login`, {

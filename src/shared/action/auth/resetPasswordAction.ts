@@ -1,6 +1,6 @@
 "use server"
 
-import { FindLoginIdReqType } from "@/type/auth/memberLoginId"
+import { FindLoginIdReqType } from "@/shared/type/auth/memberLoginId"
 
 export async function resetPasswordAction(
   req: FindLoginIdReqType,
